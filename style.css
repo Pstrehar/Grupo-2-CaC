@@ -1,0 +1,800 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 1rem;
+    height: 100%
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, header,main {
+    border: 3px red solid;
+    min-height: 50px;
+    margin: 0.5rem;
+}
+
+main {
+    min-height: 200px;
+}
+
+
+/* para todos los headers --------------------------------------*/
+.logo {
+    height: 90px;
+    margin: 1rem 1rem;
+    width: auto;
+}
+
+.header {
+    background: lightblue;
+    height: auto;
+}
+
+nav ul {
+    float:none;
+    background: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0.8;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 8px 11px;
+    border-radius: 3px;
+}
+
+li a:hover {
+    background: rgb(48, 48, 146);
+    transition: 0.5s;
+}
+
+.redes {
+    display: flex;
+    justify-content: right;
+    margin-right: 15px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display:none
+}
+
+.intro {
+    padding-top: 200px;
+    /* background: url(fondo-header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    height: 100vh;
+}
+
+.intro >h1, .intro>p {
+    margin-left: 10px;
+}
+
+.boton_intro, .boton_footer {
+    border: 1px solid #2e518b;
+    padding: 10px;
+    background-color: #2e518b;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;    
+    float: left;
+    margin: 20px;
+}
+
+/* esto no se que es ------------------------------------ */
+/* .servicios .boton_n_servicios{
+    display: flexbox;
+    justify-content: end;
+    align-content: flex-end;
+} */
+    
+.boton {
+    border: 1px solid #2e518b;
+    padding: 10px;
+    background-color: #2e518b;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    border-radius: 50px;
+    float: right;
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+form {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* footer----------------------------- */
+
+.footer1, .footer2, .footer3, .footer4{
+    border-bottom: 80px solid #0a3a83;
+    padding-top: 50px;
+}
+
+.footer1 .footer2 {
+    text-align: center;
+}
+
+.imagen_footer{
+    width:10rem;
+}
+
+.footer4 {
+    display: flex;
+    align-items:center;
+    justify-content: right;
+}
+
+/* Estructura para index ------------------------------------*/
+.contenedor {
+    width: 100%;
+   /*margin: 10px auto;*/
+    display: grid;
+    gap: 0px;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header header"
+                        "articulo1 articulo2 articulo3 articulo4"
+                        "servicios servicios servicios servicios"
+                        "footer1 footer2 footer3 footer4";
+}
+
+.contenedor .articulo1 {
+    grid-area: articulo1;
+}
+.contenedor .articulo2 {
+    grid-area: articulo2;
+}
+.contenedor .articulo3 {
+    grid-area: articulo3;
+}
+.contenedor .articulo4 {
+    grid-area: articulo4;
+}
+.contenedor .servicios{
+    grid-area: servicios;
+    display:flexbox;
+    justify-items: first baseline;
+}
+.contenedor .footer1{
+    grid-area: footer1;
+}
+.contenedor .footer2{
+    grid-area: footer2;
+}
+.contenedor .footer3{
+    grid-area: footer3;
+}
+.contenedor .footer4{
+    grid-area: footer4;
+}
+
+.contenedor .header{
+    grid-area: header;
+    background: url(img/header_index.jpg) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.servicios{
+    text-align: center;
+}
+
+article {
+padding: 10px;
+}
+
+.articulo1 img{
+    border-bottom: 10px solid #d13a60;
+}
+
+.articulo2 img{
+    border-bottom: 10px solid #f7b21f;
+}
+
+.articulo3 img{
+    border-bottom: 10px solid #eed14e;
+}
+
+.articulo4 img{
+    border-bottom: 10px solid #40e498;
+}
+
+.servicios img{   
+    width: auto;
+   }
+   
+.servicios{
+    background-color: #51BBB8;
+}
+
+.boton_n_servicios {
+    display: inline-block;
+    padding: 20px 5px 20px 120px;
+    font-weight: bold;
+    background-color: #d4e4f5;
+    color: #6ad2f1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    float: right;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.servicios h2{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    color: white;
+    padding-right: 2vw;
+}
+
+/* Estructura para Nosotros */
+.contenedor2 {
+    width: 100%;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "header header header header"
+                        "titulo-diferente titulo-diferente titulo-diferente titulo-diferente"
+                        "diferente1 diferente1 diferente1 diferente1"
+                        "diferente2 diferente2 diferente2 diferente2"
+                        "diferente3 diferente3 diferente3 diferente3"
+                        "foto-coordinador coordinador coordinador coordinador"
+                        "psicologo1 psicologo2 psicologo3 psicologo4"
+                        "footer1 footer2 footer3 footer4";
+}
+.contenedor2 .header{
+    grid-area: header;
+    background: url(img/header_nosotros.jpg) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.contenedor2 .titulo-diferente{
+    grid-area: titulo-diferente;
+    background-color: #eed14e;
+    text-align: center;
+}
+.contenedor2 .diferente1{
+    grid-area: diferente1;
+    text-align: justify;
+    padding: 3rem;
+}
+.contenedor2 .diferente2{
+    grid-area: diferente2;
+    background-color: #6ad2f1;
+    text-align: justify;
+    padding: 3rem;
+    }
+.contenedor2 .diferente3{
+    grid-area: diferente3;
+    background-color: hsl(24, 97%, 54%);
+    text-align: justify;
+    padding: 3rem;
+    }
+.contenedor2 .foto-coordinador{
+    grid-area: foto-coordinador;
+    margin-top: 2rem;
+}
+.contenedor2 .coordinador{
+    grid-area: coordinador;
+    text-align: justify;
+    padding: 3rem;
+}
+.contenedor2 .psicologo1{
+    grid-area: psicologo1;
+    text-align: justify;
+    padding: 1rem;
+    border-bottom: 10px solid #d13a60;
+}
+.contenedor2 .psicologo2{
+    grid-area: psicologo2;
+    text-align: justify;
+    padding: 1rem;
+    border-bottom: 10px solid #f7b21f;
+}
+.contenedor2 .psicologo3{
+    grid-area: psicologo3;
+    text-align: justify;
+    padding: 1rem;
+    border-bottom: 10px solid #eed14e;
+}
+.contenedor2 .psicologo4{
+    grid-area: psicologo4;
+    text-align: justify;
+    padding: 1rem;
+    border-bottom: 10px solid #40e498;
+}
+.contenedor2 .footer1{
+    grid-area: footer1;
+}
+.contenedor2 .footer2{
+    grid-area: footer2;
+}
+.contenedor2 .footer3{
+    grid-area: footer3;
+}
+.contenedor2 .footer4{
+    grid-area: footer4;
+}
+
+.datos-psico {
+    padding: 10px;
+}
+
+.listas_psicologos li {
+list-style:disc inside
+}
+
+/* .datos-psico:hover, .coordinador:hover, */
+.diferente1:hover, .diferente2:hover, .diferente3:hover { 
+    background: rgb(49, 96, 128);
+    color: white;
+}
+
+.foto-coordinador {
+    margin-bottom: 10px;
+    background-color: #15af74;
+}
+
+.coordinador{
+    padding: 10px;
+    background-color: #15af74;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Estructura para Servicios */
+.contenedor3 {
+    width: 100%;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(11, auto);
+    grid-template-areas: "header header header header"
+                        "titulo-servicios titulo-servicios titulo-servicios titulo-servicios"
+                        "servicio1 servicio1 servicio1 foto_servicio1"
+                        "foto_servicio2 servicio2 servicio2 servicio2"
+                        "servicio3 servicio3 servicio3 foto_servicio3"
+                        "foto_servicio4 servicio4 servicio4 servicio4"
+                        "servicio5 servicio5 servicio5 foto_servicio5"
+                        "foto_servicio6 servicio6 servicio6 servicio6"
+                        "servicio7 servicio7 servicio7 foto_servicio7"
+                        "foto_servicio8 servicio8 servicio8 servicio8"
+                        "footer1 footer2 footer3 footer4";
+}
+.contenedor3 .header{
+    grid-area: header;
+    background: url(img/header_servicios.jpg) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.contenedor3 .titulo-servicios{
+    grid-area: titulo-servicios;
+}
+.contenedor3 .servicio1{
+    grid-area: servicio1;
+}
+.contenedor3 .servicio2{
+    grid-area: servicio2;
+}
+.contenedor3 .servicio3{
+    grid-area: servicio3;
+}
+.contenedor3 .servicio4{
+    grid-area: servicio4;
+}
+.contenedor3 .servicio5{
+    grid-area: servicio5;
+}
+.contenedor3 .servicio6{
+    grid-area: servicio6;
+}
+.contenedor3 .servicio7{
+    grid-area: servicio7;
+}
+.contenedor3 .servicio8{
+    grid-area: servicio8;
+}
+.contenedor3 .footer1{
+    grid-area: footer1;
+}
+.contenedor3 .footer2{
+    grid-area: footer2;
+}
+.contenedor3 .footer3{
+    grid-area: footer3;
+}
+.contenedor3 .footer4{
+    grid-area: footer4;
+}
+
+.titulo-servicios {
+    text-align: center;
+    background-color: #b9b71f;
+    color: #2e518b;
+    padding: 3rem;
+    margin: 0px;
+}
+.foto_servicio1, .foto_servicio2, .foto_servicio3, .foto_servicio4, .foto_servicio5, .foto_servicio6, .foto_servicio7, .foto_servicio8 {
+    display:flex;
+    align-items: center;
+}
+.foto_servicio1, .servicio1{
+    background-color: #f9fbfc;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio2, .servicio2{
+    background-color: #7ebbdf;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio3, .servicio3{
+    background-color: #fafbfc;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio4, .servicio4{
+    background-color: #db9292;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio5, .servicio5{
+    background-color: #fcf9fb;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio6, .servicio6{
+    background-color: #4d917a;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio7, .servicio7{
+    background-color: #f9f9fa;
+    text-align: justify;
+    padding: 1rem;
+}
+.foto_servicio8, .servicio8{
+    background-color: #ce9cce;
+    text-align: justify;
+    padding: 1rem;
+}
+
+/* Estructura para Notas */
+.contenedor4 {
+    width: 100%;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:  "header header header header"
+                            "foto_nota1 nota1 nota1 nota1"
+                            "foto_nota2 nota2 nota2 nota2"
+                            "foto_nota3 nota3 nota3 nota3"
+                            "foto_nota4 nota4 nota4 nota4"
+                            "footer1 footer2 footer3 footer4";
+}
+.contenedor4 .header{
+    grid-area: header;
+    background: url(img/header_notas.jpg) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.contenedor4 .foto_nota1{
+    grid-area: foto_nota1;
+}
+.contenedor4 .foto_nota2{
+    grid-area: foto_nota2;
+}
+.contenedor4 .foto_nota3{
+    grid-area: foto_nota3;
+}
+.contenedor4 .foto_nota4{
+    grid-area: foto_nota4;
+}
+.contenedor4 .nota1{
+    grid-area: nota1;
+}
+.contenedor4 .nota2{
+    grid-area: nota2;
+}
+.contenedor4 .nota3{
+    grid-area: nota3;
+}
+.contenedor4 .nota4{
+    grid-area: nota4;
+}
+.contenedor4 .footer1{
+    grid-area: footer1;
+}
+.contenedor4 .footer2{
+    grid-area: footer2;
+}
+.contenedor4 .footer3{
+    grid-area: footer3;
+}
+.contenedor4 .footer4{
+    grid-area: footer4;
+}
+.contenedor4 article {
+text-align: justify;
+padding-top: 0px;
+}
+.foto_nota1, .foto_nota2, .foto_nota3, .foto_nota4 {
+    padding: 20px;
+    display:flex;
+    align-items: center;
+}
+.foto_nota1, .nota1{
+    background-color: #6ad2f1;
+    text-align: justify;
+    padding: 3rem;
+}
+.foto_nota2, .nota2{
+    background-color: #15af74;
+    text-align: justify;
+    padding: 3rem;
+}
+.foto_nota3, .nota3{
+    background-color: #6ad2f1;
+    text-align: justify;
+    padding: 3rem;
+}
+.foto_nota4, .nota4{
+    background-color: #7b2383;
+    text-align: justify;
+    padding: 3rem;
+}
+
+/* Estructura para Contacto */
+
+/* responsive general para menu nav */
+@media screen and (max-width: 768px){
+    .enlace {
+        padding-left: 0;
+    }
+    nav ul li a{
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 120px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/* responsive para index */
+@media screen and (max-width: 768px){
+    .contenedor {
+        padding: 0vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header header"
+                            "articulo1 articulo2"
+                            "articulo3 articulo4" 
+                            "servicios servicios"
+                            "footer1 footer2";
+    }
+
+    .footer3, .footer4 {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "header"
+                            "articulo1"
+                            "articulo2" 
+                            "articulo3" 
+                            "articulo4"
+                            "servicios"
+                            "footer1";
+    }
+    .footer2, .footer3, .footer4 {
+        display: none;
+    }
+}
+
+/* responsive para nosotros */
+@media screen and (max-width: 768px){
+    .contenedor2 {
+        padding: 0vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas: "header header"
+                                "titulo-diferente titulo-diferente"
+                                "diferente1 diferente1"
+                                "diferente2 diferente2"
+                                "diferente3 diferente3"
+                                "foto-coordinador coordinador" 
+                                "psicologo1 psicologo2"
+                                "psicologo3 psicologo4"
+                                "footer1 footer2";
+        }
+        .footer3, .footer4 {
+            display: none;
+        }
+}
+
+@media screen and (max-width: 600px){
+        .contenedor2 {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(12, auto);
+            grid-template-areas: "header"
+                                "titulo-diferente"
+                                "diferente1"
+                                "diferente2" 
+                                "diferente3"
+                                "foto-coordinador"
+                                "coordinador"
+                                "psicologo1"
+                                "psicologo2"
+                                "psicologo3"
+                                "psicologo4"
+                                "footer1";
+    }
+    .footer2, .footer3, .footer4 {
+        display: none;
+    }
+}
+/* responsive para servicios */
+@media screen and (max-width: 768px){
+    .contenedor3 {
+        padding: 0vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas: "header header header"
+                            "titulo-servicios titulo-servicios titulo-servicios"
+                            "servicio1 servicio1 foto_servicio1"
+                            "foto_servicio2 servicio2 servicio2"
+                            "servicio3 servicio3 foto_servicio3"
+                            "foto_servicio4 servicio4 servicio4"
+                            "servicio5 servicio5 foto_servicio5"
+                            "foto_servicio6 servicio6 servicio6"
+                            "servicio7 servicio7 foto_servicio7"
+                            "foto_servicio8 servicio8 servicio8"
+                            "footer1 footer2 footer3";
+    }
+    .footer4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedor3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(19, auto);
+        grid-template-areas:"header"
+                            "titulo-servicios"
+                            "foto_servicio1"
+                            "servicio1"
+                            "foto_servicio2"
+                            "servicio2"
+                            "foto_servicio3"
+                            "servicio3"
+                            "foto_servicio4"
+                            "servicio4"
+                            "foto_servicio5"
+                            "servicio5"
+                            "foto_servicio6"
+                            "servicio6"
+                            "foto_servicio7"
+                            "servicio7"
+                            "foto_servicio8"
+                            "servicio8"
+                            "footer1";
+    }
+    .footer2, .footer3, .footer4 {
+        display: none;
+    }
+}
+
+/* responsive para notas */
+@media screen and (max-width: 768px){
+    .contenedor4 {
+        padding: 0vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "header header header"
+                            "foto_nota1 nota1 nota1"
+                            "foto_nota2 nota2 nota2"
+                            "foto_nota3 nota3 nota3"
+                            "foto_nota4 nota4 nota4"
+                            "footer1 footer2 footer3"
+    }
+    .footer4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+        .contenedor4 {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(10, auto);
+            grid-template-areas: "header"
+                                "foto_nota1"
+                                "nota1"
+                                "foto_nota2"
+                                "nota2"
+                                "foto_nota3"
+                                "nota3"
+                                "foto_nota4"
+                                "nota4"
+                                "footer1";
+    }
+    .footer2, .footer3, .footer4 {
+        display: none;
+    }
+}
+
+/* responsive para contacto */
