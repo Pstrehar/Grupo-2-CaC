@@ -83,16 +83,12 @@ li a:hover {
 
 .intro {
     padding-top: 200px;
-    /* background: url(fondo-header.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center; */
     height: 100vh;
 }
 
 .intro >h1, .intro>p {
     margin-left: 10px;
 }
-
 .boton_intro, .boton_footer {
     border: 1px solid #2e518b;
     padding: 10px;
@@ -104,15 +100,7 @@ li a:hover {
     float: left;
     margin: 20px;
 }
-
-
-/* esto no se que es ------------------------------------ */
-/* .servicios .boton_n_servicios{
-    display: flexbox;
-    justify-content: end;
-    align-content: flex-end;
-} */
-    
+   
 .boton {
     border: 1px solid #2e518b;
     padding: 10px;
@@ -138,7 +126,7 @@ form {
 /* footer----------------------------- */
 
 .footer1, .footer2, .footer3, .footer4{
-    border-bottom: 80px solid #0a3a83;
+    border-bottom: 80px solid #51BBB8;
     padding-top: 50px;
 }
 
@@ -165,7 +153,7 @@ form {
     padding-left: 20vh;
     padding-right: 20vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 100vh repeat(3, auto);
     grid-template-areas: "header header header header"
                         "articulo1 articulo2 articulo3 articulo4"
                         "servicios servicios servicios servicios"
@@ -271,7 +259,7 @@ padding: 10px;
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: 100vh repeat(7, auto);
     grid-template-areas: "header header header header"
                         "titulo-diferente titulo-diferente titulo-diferente titulo-diferente"
                         "diferente1 diferente1 diferente1 diferente1"
@@ -289,8 +277,11 @@ padding: 10px;
 }
 .contenedor2 .titulo-diferente{
     grid-area: titulo-diferente;
-    background-color: #eed14e;
+    background-color: #e9ce94;
+    color: #2e518b;
     text-align: center;
+    padding: 2rem;
+    margin: 0px;
 }
 .contenedor2 .diferente1{
     grid-area: diferente1;
@@ -305,7 +296,7 @@ padding: 10px;
     }
 .contenedor2 .diferente3{
     grid-area: diferente3;
-    background-color: hsl(24, 97%, 54%);
+    background-color: hsl(24, 94%, 66%);
     text-align: justify;
     padding: 3rem;
     }
@@ -389,7 +380,7 @@ list-style:disc inside
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(11, auto);
+    grid-template-rows: 100vh repeat(10, auto);
     grid-template-areas: "header header header header"
                         "titulo-servicios titulo-servicios titulo-servicios titulo-servicios"
                         "servicio1 servicio1 servicio1 foto_servicio1"
@@ -450,9 +441,9 @@ list-style:disc inside
 
 .titulo-servicios {
     text-align: center;
-    background-color: #b9b71f;
+    background-color: #e9ce94;
     color: #2e518b;
-    padding: 3rem;
+    padding: 2rem;
     margin: 0px;
 }
 .foto_servicio1, .foto_servicio2, .foto_servicio3, .foto_servicio4, .foto_servicio5, .foto_servicio6, .foto_servicio7, .foto_servicio8 {
@@ -508,7 +499,7 @@ list-style:disc inside
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: 100vh repeat(5, auto);
     grid-template-areas:  "header header header header"
                             "foto_nota1 nota1 nota1 nota1"
                             "foto_nota2 nota2 nota2 nota2"
@@ -559,8 +550,8 @@ list-style:disc inside
     grid-area: footer4;
 }
 .contenedor4 article {
-text-align: justify;
-padding-top: 0px;
+    text-align: justify;
+    padding-top: 0px;
 }
 .foto_nota1, .foto_nota2, .foto_nota3, .foto_nota4 {
     padding: 20px;
@@ -570,25 +561,179 @@ padding-top: 0px;
 .foto_nota1, .nota1{
     background-color: #6ad2f1;
     text-align: justify;
-    padding: 3rem;
+    padding: 1rem;
 }
 .foto_nota2, .nota2{
     background-color: #15af74;
     text-align: justify;
-    padding: 3rem;
+    padding: 1rem;
 }
 .foto_nota3, .nota3{
     background-color: #6ad2f1;
     text-align: justify;
-    padding: 3rem;
+    padding: 1rem;
 }
 .foto_nota4, .nota4{
-    background-color: #7b2383;
+    background-color: #ac7db1;
     text-align: justify;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 /* Estructura para Contacto */
+
+.contenedor5 {
+    width: 100%;
+   /*margin: 10px auto;*/
+    display: grid;
+    gap: 0px;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100vh repeat(4, auto);
+    grid-template-areas: "header header header header"
+                        "info    info     form    form"
+                        "info     info    form     form"
+                        "mapa     mapa    mapa     mapa"
+                        "footer1 footer2 footer3 footer4";
+}
+
+.contenedor5 .header{
+    grid-area: header;
+    background: url(img/header_contacto.jpg) no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+
+
+/*.contenedor5 .header .intro{
+   
+   /* background-color: #dbdbdb50;
+    width: 30vw;
+    margin-left: 20px;
+    text-align: justify;
+}*/
+
+.contenedor5 .form-contacto{
+    grid-area: form;
+    background-color: rgb(236, 244, 247);
+    width: 30vw;
+    margin: 50px;
+    min-width: none;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);*/
+    box-shadow: 7px 13px 25px rgba(0, 0, 0, .3);
+
+}
+
+.contenedor5 .form-contacto .header-contacto {
+
+    width: 100%;
+    background-color: rgb(134, 189, 207);
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+
+.contenedor5 .form-contacto .header-contacto span{
+
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    padding: 2.5rem;
+
+}
+
+.contenedor5 .form-contacto .contact{
+
+    padding: .8rem;
+    overflow: hidden;
+    color: grey;
+}
+
+.contenedor5 .form-contacto .contact label, .contenedor5 .form-contacto .contact input, .contenedor5 .form-contacto .contact textarea{
+
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.contenedor5 .form-contacto .header-contacto label{
+
+    font-weight: 700;
+}
+
+.contenedor5 .form-contacto .header-contacto input:not([type='submit']), .contenedor5 .form-contacto .header-contacto textarea{
+
+    border: none;
+    border-bottom: 2px solid #e42789;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color: grey;
+}
+
+.contenedor5 .form-contacto .contact textarea{
+
+    min-height: 100px;
+}
+
+.contenedor5 .form-contacto .contact input[type='submit']{
+
+    padding: 10px;
+    border: none;
+    background-color:rgb(134, 189, 207);
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contenedor5 .info-contacto{
+    grid-area: info;
+    /*background-color: #a1a1a1;*/
+    
+    margin: 20px;
+    padding: 60px;
+}
+
+.contenedor5 .info-contacto img{
+    grid-area: info;
+    width: 10vw;  
+       
+}
+
+.contenedor5 .mapa{
+    grid-area: mapa;
+    margin: auto;
+    width: 75vw;
+              
+}
+
+.contenedor5 .footer1{
+    grid-area: footer1;
+}
+.contenedor5 .footer2{
+    grid-area: footer2;
+}
+.contenedor5 .footer3{
+    grid-area: footer3;
+}
+.contenedor5 .footer4{
+    grid-area: footer4;
+}
+
+/*.contenedor5 .header form{
+      
+    width: 30vw;
+    background-color: #2c3e5050;
+}
+ 
+fieldset {
+    
+    background-color: #15af74;
+    border: 0px;
+}*/
 
 /* responsive general para menu nav */
 @media screen and (max-width: 768px){
@@ -799,3 +944,38 @@ padding-top: 0px;
 }
 
 /* responsive para contacto */
+
+@media screen and (max-width: 768px){
+    .contenedor5 {
+        padding: 0vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header header"
+                                "info    form"
+                                "info     form"
+                                "mapa     mapa"
+                                "footer1  footer2";
+        }
+    .footer3, .footer4 {
+        display: none;
+        }
+}
+
+@media screen and (max-width: 600px){
+        .contenedor5 {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: "header"
+                                "info"
+                                "form"
+                                "mapa" 
+                                "footer1";
+    }
+    .contenedor5 .form-contacto{
+        width: 80vw;
+    }
+    .footer2, .footer3, .footer4 {
+        display: none;
+    }
+
+}
