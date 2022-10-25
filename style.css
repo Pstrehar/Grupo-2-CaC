@@ -153,10 +153,11 @@ form {
     padding-left: 20vh;
     padding-right: 20vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100vh repeat(3, auto);
+    grid-template-rows: 100vh repeat(4, auto);
     grid-template-areas: "header header header header"
                         "articulo1 articulo2 articulo3 articulo4"
                         "servicios servicios servicios servicios"
+                        "comentarios comentarios comentarios comentarios"
                         "footer1 footer2 footer3 footer4";
 }
 
@@ -176,6 +177,9 @@ form {
     grid-area: servicios;
     display:flexbox;
     justify-items: first baseline;
+}
+.contenedor .comentarios{
+    grid-area: comentarios;
 }
 .contenedor .footer1{
     grid-area: footer1;
@@ -250,6 +254,28 @@ padding: 10px;
     color: white;
     padding-right: 2vw;
 }
+
+  .tituloComentarios{
+    text-align: center;
+    color: #5f6794;
+    padding-top: 2em;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #bcbdbe;
+    padding-top: 5px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fafcfc;
+  }
+  
+  th, td {
+    text-align: justify;
+    vertical-align: top;
+    border-collapse: collapse;
+    padding: 0.5em;
+ }
 
 /* Estructura para Nosotros */
 .contenedor2 {
@@ -564,17 +590,17 @@ list-style:disc inside
     padding: 1rem;
 }
 .foto_nota2, .nota2{
-    background-color: #15af74;
+    background-color: #41ac83;
     text-align: justify;
     padding: 1rem;
 }
 .foto_nota3, .nota3{
-    background-color: #6ad2f1;
+    background-color: #d3b8db;
     text-align: justify;
     padding: 1rem;
 }
 .foto_nota4, .nota4{
-    background-color: #ac7db1;
+    background-color: #7d9cb1;
     text-align: justify;
     padding: 1rem;
 }
@@ -782,11 +808,12 @@ fieldset {
     .contenedor {
         padding: 0vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
         grid-template-areas: "header header"
                             "articulo1 articulo2"
                             "articulo3 articulo4" 
                             "servicios servicios"
+                            "comentarios comentarios"
                             "footer1 footer2";
     }
 
@@ -797,13 +824,14 @@ fieldset {
 @media screen and (max-width: 600px){
     .contenedor {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, auto);
+        grid-template-rows: repeat(8, auto);
         grid-template-areas: "header"
                             "articulo1"
                             "articulo2" 
                             "articulo3" 
                             "articulo4"
                             "servicios"
+                            "comentarios"
                             "footer1";
     }
     .footer2, .footer3, .footer4 {

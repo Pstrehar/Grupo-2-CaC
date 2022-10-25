@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
     <script src="https://kit.fontawesome.com/f91f6fc5df.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <div class="contenedor">
@@ -29,8 +30,7 @@
             </ul>
             <div class="intro animate__animated animate__bounce">
                 <h1>Somos expertos en psicología infantil</h1>
-                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>
-                <p> sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+                <p> Tenemos las herramientas para ayudarte</p>
                 <a class="boton_intro" href="nosotros.html">Conocé más</a>
             </div>
         </nav>
@@ -57,8 +57,42 @@
             <img class="item1" src="./IMG/NoDejes_1.png" alt="ninos&adolescentes">
             <img class="item2" src="./IMG/NoDejes_2.png" alt="adultos">
             <a class="boton_n_servicios" href="servicios.html">Nuestros servicios</a>
-    </section>
+        </section>
        
+        <section class="comentarios">
+            <h2 class="tituloComentarios">Testimonios de nuestros pacientes</h2>
+            <table class="tabla">
+            <thead>
+                <tr>
+                <th>Nombre</th>
+                <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+            </table>
+        
+        </section>
+
+            
+        <script>
+          let url = 'https://jsonplaceholder.typicode.com/comments/';
+            fetch(url)
+                .then( response => response.json() )
+                .then( data => mostrarData(data) )
+                .catch( error => console.log(error) )
+    
+            const mostrarData = (data) => {
+                console.log(data)
+                let body = ""
+                for (var i = 0; i < 9; i++) {      
+                   body+=`<tr><td>${data[i].name}</td><td>${data[i].body}`
+                }
+                document.getElementById('data').innerHTML = body
+                //console.log(body)
+            }
+        </script>
+
     <footer class="footer1">
         <img src="img/footer.png" alt="imagen_footer" class="imagen_footer">
     </footer>
