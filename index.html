@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicoadaptativa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
     <script src="https://kit.fontawesome.com/f91f6fc5df.js" crossorigin="anonymous"></script>
@@ -73,25 +74,6 @@
             </table>
         
         </section>
-
-            
-        <script>
-          let url = 'https://jsonplaceholder.typicode.com/comments/';
-            fetch(url)
-                .then( response => response.json() )
-                .then( data => mostrarData(data) )
-                .catch( error => console.log(error) )
-    
-            const mostrarData = (data) => {
-                console.log(data)
-                let body = ""
-                for (var i = 0; i < 9; i++) {      
-                   body+=`<tr><td>${data[i].name}</td><td>${data[i].body}`
-                }
-                document.getElementById('data').innerHTML = body
-                //console.log(body)
-            }
-        </script>
 
     <footer class="footer1">
         <img src="img/footer.png" alt="imagen_footer" class="imagen_footer">

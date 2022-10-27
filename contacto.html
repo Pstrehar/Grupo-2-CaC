@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicoadaptativa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f91f6fc5df.js" crossorigin="anonymous"></script>
 </head>
@@ -17,7 +18,7 @@
                     <i class="fas fa-bars"></i>
                 </label>
                 
-                <a href="a" class="enlace">
+                <a href="./index.html" class="enlace">
                     <img src="img/logo circulo.png" alt="logo" class="logo">
                 </a>
 
@@ -29,59 +30,29 @@
                     <li><a href="contacto.html">CONTACTO</a></li>
                 </ul>
 
-                <div class="intro">
-                    <!--<h1>Envíenos un mensaje</h1>
-                    <p> Consultorios profesionales ubicados en Capital Federal, zonas de Villa Urquiza
-                        , Belgrano, Nuñez y Palermo. Así como también en Zona Norte.</p>
-                    <p>Atención domiciliaria para los servicios de Psicología, Psicopedagogía y Apoyo escolar de las necesidades educativas
-                        . Realizamos neurocognitivos y poseemos amplia experiencia en el abordaje de autismo. </p>
-                    <p>Honorarios acordes y accesibles, prestaciones a particulares y facturación por reintegro (solo tratamientos)
-                        a obras sociales y prepagas a quienes cuenten con certificado de discapacidad.</p>
-                    <img src="" alt="">
-                    <!--<a class="boton_intro" href="nosotros.html">Conocé más</a>--> 
-                </div>
-
-            <!-- <form action="link" method="get">
-                <fieldset>                    
-                    <label for="firstname"> Nombre: </label>
-                    <input size="30" type="text" name="firstname" id="firstname"> <br> <br>
-                    <!--<label for="age">Edad: </label>
-                    <input size="3" type="number" id="age" maxlength="3"> <br> <br>
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" name="email"> <br><br>
-                    <br> <br>
-                    Consulta: <textarea name="comentario" rows="10" cols="40">Escribe tu consulta...</textarea> <br><br>
-                    <input type="submit" value="Enviar datos">
-                </fieldset>
-            </form> -->
-          
         </nav>
-
-
         <section class="form-contacto">
             
             <div class="header-contacto">
                 <span>
                     <i class="fa fa-paper-plane"></i>
                 </span>
-
             </div>        
 
-            <form action="" class="contact">
+            <form action="" class="contact" id="myform" onsubmit="return validate();">
 
                 <label for="nombres">Nombre:</label>
-                <input type="text" name="nombres" id="nombres">
+                <input type="text" id="name">
 
                 <label for="correo">Email:</label>
-                <input type="text" name="correo" id="correo">
+                <input type="text" id="email">
 
                 <label for="celular">Celular:</label>
-                <input type="text" name="celular" id="celular">
+                <input type="text" id="phone" >
 
                 <label for="mensaje">Consulta:</label>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10"> Escriba su consulta...</textarea>
+                <textarea name="mensaje" id="message" cols="30" rows="10" placeholder=" Escriba su consulta..."></textarea>
                 <input type="submit" value="Enviar">
-
             </form>
 
         </section>
@@ -99,14 +70,11 @@
 
                     </div>
 
-
         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.1075283570685!2d-58.48875688399786!3d-
         34.576145663548246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb65d6f566683%3A0x2d24f997ff529493!2
         sBauness%202254%2C%20C1431%20CABA!5e0!3m2!1ses-419!2sar!4v1665866572737!5m2!1ses-419!2sar"  
         height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-
-
 
         <footer class="footer1">
             <img src="img/footer.png" alt="imagen_footer" class="imagen_footer">
@@ -126,7 +94,6 @@
             envianos tu consulta.</h3>
             <a class="boton_footer" href="contacto.html">CONTACTANOS</a>
         </footer>
-                    
     
         <footer class="footer4">
             <a href="https://www.instagram.com/">
